@@ -25,6 +25,10 @@ df["sales"] = pd.to_numeric(df["sales"], errors="coerce").fillna(0)
 df["onpromotion"] = pd.to_numeric(df["onpromotion"], errors="coerce").fillna(0)
 df["transactions"] = pd.to_numeric(df["transactions"], errors="coerce").fillna(0)
 
+import pandas as pd
+df = pd.read_csv("parte_1.csv")
+print(df.head(3).to_string())
+
 st.title("Dashboard de Ventas - Visualización de Datos: Práctica Final")
 with tab1:
     st.header("Visualización global")
